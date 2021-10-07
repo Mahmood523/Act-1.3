@@ -20,7 +20,7 @@ public class Palindrome {
 
 public static void main(String a[])
 {
-      String mot, mot_inverse = "";
+      String mot = "";
        Scanner in = new Scanner(System.in);
   
        System.out.println("Entrer un mot ");
