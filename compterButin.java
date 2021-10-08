@@ -47,7 +47,9 @@ public static void main(String a[])
      somme(resultat);
      System.out.println("Résultat total : "+ s +". Continuez ? ");
      OoN = in.nextLine();
+  else   
      continuer(OoN);
+     System.out.println("Merci, à bientôt l'ami ! ");
   
 }
 }
