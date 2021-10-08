@@ -33,6 +33,24 @@ static void displayTab(String[] prenom)
         }
         System.out.println();
     }
+    public static int recherche_di(String prenom3[],int f, int l, String val){
+    int l=prenom3.length;
+    int f =0;
+    if (l >= f){
+      int mid = f + (l - f)/2;
+      if (prenom3[mid] == val){
+        return mid;
+      }
+      if (prenom3[mid] .compareTo (val) < 0){
+        //recherche dans le sous-tableau à gauche
+        return recherche_di(prenom3, f, mid-1, val); 
+      }else{
+        //recherche dans le sous-tableau à droit
+        return recherche_di(prenom3, mid+1, l, val); 
+      }
+    }
+    return -1;
+   }
 
 
 public static void main(String[] args)
@@ -74,6 +92,14 @@ public static void main(String[] args)
         tri_bulle(prenom3);
         System.out.println("---tableau---");
         displayTab(prenom3);
+        System.out.println("Entrer un mot ");
+        val = in.nextLine();
+        int res = recherche_di(prenom3,val);
+    if (res != -1)
+      System.out.println("L'élément se trouve à l'index: " + res);
+    else
+      System.out.println("L'élément n'existe pas!");
 
 }
 }
+
