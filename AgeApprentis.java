@@ -9,14 +9,14 @@ static void tri_selection(int[] ageArray)
                int index = i;  
                for (int j = i + 1; j < ageArray.length; j++)
                {
-                    if (ageArray[j] < ageArray[index]){ 
+                    if (ageArray[j] > ageArray[index]){ 
                          index = j;
                     }
                }
  
-               int min = ageArray[index];
+               int max = ageArray[index];
                ageArray[index] = ageArray[i]; 
-               ageArray[i] = min;
+               ageArray[i] = max;
           }
 
 }
@@ -46,7 +46,6 @@ public static void main(String a[])
         displayTab(ageArray);
 }
 }
-
 
 
 
